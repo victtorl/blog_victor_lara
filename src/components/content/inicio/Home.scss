@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+$assetImage: "../../assets";
+//mobile
+@media only screen and (max-width: 1000px) {
+  #page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+    "busqueda "
+    "contenido "
+    "imagen ";
+    grid-template-rows:  1fr;
+    grid-template-columns: 1fr ;
+
+    .busqueda{
+      grid-area:busqueda;
+      background-color: aquamarine;
+      //centrar ////////////////centrar los elementos que no estan agrupados
+      text-align: center;
+      position:sticky;
+      
+      p{
+        margin-top: 1rem;
+        font-size: 18px;
+        height: 6rem;
+      }
+      input{
+          width: 20rem;
+          margin-top: -5rem;
+          ///el REAL CENTRADO
+          position: absolute;
+          top: 10rem; //VARIABLE
+          left: 50%;
+          transform: translate(-50%, -50%);
+         
+      }
+      
+
+  }
+
+
+  .contenido {
+      grid-area: contenido;
+      //centrar contenido dinamicamente muy util
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+
+    p {
+      line-height: 2;
+      font-family: "Open Sans", sans-serif;
+      text-align: justify;
+    }
+
+   
+  }
+
+  .imagen {
+    grid-area: imagen;
+    background-color: #ffff64;
+    padding: 2rem;
+
+    img {
+      background: url(../../../assets/images/monachina.jpg);
+      border: solid 1px red;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      
+      width: 100%;
+      height: 400px;
+
+      text-align: center;
+    }
+  }
+}
+
+
+.card{
+  margin: 2rem;
+  width: 10rem;
+  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+}
+
+//pc
+@media only screen and (min-width: 1000px) {
+  #page{
+    margin-top: 5rem;
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+      "busqueda busqueda"
+      "contenido  imagen"
+      "contenido  imagen";
+     
+    grid-template-rows: 10rem 1fr 1fr;
+    grid-template-columns: 70% 1fr ;
+
+    .busqueda{
+        grid-area:busqueda;
+        background-color: aquamarine;
+        //centrar ////////////////centrar los elementos que no estan agrupados
+        text-align: center;
+        p{
+          margin-top: 2rem;
+          font-size: 18px;
+        }
+        input{
+            width: 20rem;
+            margin-top: 1rem;
+            ///el REAL CENTRADO
+            position: absolute;
+            top: 10rem; //VARIABLE
+            left: 50%;
+            transform: translate(-50%, -50%);
+           
+        }
+        
+
+    }
+
+ 
+    .contenido {
+        grid-area: contenido;
+        //centrar contenido dinamicamente muy util
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+
+      p {
+        line-height: 2;
+        font-family: "Open Sans", sans-serif;
+        text-align: justify;
+      }
+
+     
+    }
+
+    .imagen {
+      grid-area: imagen;
+      background-color: #ffff64;
+      
+      padding: 2rem;
+
+      img {
+        background: url(../../../assets/images/chems.jpg);
+        background-color: #ffff64;
+        border-radius: 10px;
+        // border: solid 1px red;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+        width: 100%;
+        height: 400px;
+
+        text-align: center;
+      }
+    }
+  }
+
+  
+  .card{
+    margin: 2rem;
+    width: 10rem;
+    overflow: hidden;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    font-size: 10pt;
+    .card-title{
+      text-align: center;
+      margin: -1em;
+    }
+    .card-body{
+      p{
+        margin-top: -1em;
+      }
+      .card-text.resumen{
+        line-height: 1.2;
+            
+      }
+      .card-text.tags{
+        font-style: italic;
+        color: #495057;
+      }
+    }
+    button{
+      display: flex;
+      padding: 0;
+      padding: 1em;
+      border: none;
+      background-color: #7FFFD4;
+      .link{
+        text-decoration: none;
+        width: 100%;
+        // text-transform:uppercase;
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+      }
+    }
+    button:hover{
+      background-color: #3459E6;
+      .link{
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+[
+    {
+        "date": "07/10/22",
+        "tags": "react",
+        "title": "Mi antiguo portafolio",
+        "description":"Mi anterior portafolio :v...",
+        "urlproject": "https://portafoliorlg.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "php tasa cambio dolar api",
+        "title": "Conversor tipo de cambio",
+        "description":"Calcula el tipo de cambio segun tasa de SUNAT.",
+        "urlproject": "https://calculodos.webcindario.com/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react canciones deezer api",
+        "title": "Busqueda de canciones",
+        "description":"Un buscador de canciones que usa la API de Deezer.",
+        "urlproject": "https://search-songs-app.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react firebase firestore cloud",
+        "title": "Cargar imagenes a firebase usando Cloud Firestore",
+        "description":"Gestion de imagenes a Cloud Firestore.",
+        "urlproject": "https://portafoliorlg.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react rick morty api",
+        "title": "Buscar personajes",
+        "description":"Buscando personajes Rick y Morty.",
+        "urlproject": "https://rickvictorlara.webcindario.com/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react tickets next",
+        "title": "Mockup de una app de venta de tickets",
+        "description":"Prueba de concepto flujo de una app de venta de tickets.",
+        "urlproject": "https://appventaticketsv2.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "html css login",
+        "title": "Login de una app",
+        "description":"Practicando el diseño de un login usando html y css.",
+        "urlproject": "https://loginchulo1.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react mysql viajes reservas",
+        "title": "Gestion de reservas en una agencia de viajes",
+        "description":"Gestionando las existencias de reservas en una agencia de viajes.",
+        "urlproject": "https://transcendent-sprinkles-f0e1d4.netlify.app/"
+    },
+    {
+        "date": "07/10/22",
+        "tags": "react menu sorteo",
+        "title": "Sorteo de menu semanal",
+        "description":"Gestionando el menu semanal entre una serie de platos.",
+        "urlproject": "https://menufamilia.netlify.app/"
+    }
+]

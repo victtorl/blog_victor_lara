@@ -1,0 +1,34 @@
+//mobile
+@media only screen and (max-width: 1000px) {
+    nav{
+        // 4rem del nav esta fijo por el estilo aplicado con clases de boostrap
+       
+        .container-fluid{
+            bottom:1rem;
+        }
+        .mk{
+        }
+    }
+    
+  }
+
+//pc
+@media only screen and (min-width: 1000px) {
+    nav{
+        // 4rem del nav esta fijo por el estilo aplicado con clases de boostrap
+        height: 5rem;
+       
+        .mknavlink{
+            text-decoration:none;
+            
+            .nav-link{
+            color: aliceblue;
+
+            }
+            .nav-link:hover{
+                background-color: #3459E6;
+            }
+        }
+    }
+    
+  }

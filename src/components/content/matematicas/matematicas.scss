@@ -1,0 +1,132 @@
+// mobile first
+@media only screen and (max-width: 1000px) {
+    .matematicas {
+        margin-top: 0.02rem;
+        display: grid;
+        width: 100%;
+        
+        grid-template-areas:
+            "titulo  "
+            "contenido "
+            "imagen ";
+        grid-template-rows: 1fr ;
+        grid-template-columns: 1fr ;
+
+
+        .titulo {
+            grid-area: titulo;
+            background-color: #8855;
+            
+            p{
+                font-size: 20px;
+                line-height: 2;
+                font-weight: 700;
+                margin-left: 2rem;
+
+               
+            }
+        }
+
+        .contenido{
+            grid-area: contenido;
+            background-color: #ffa08c;
+            
+            font-size: 16px;
+            padding: 2rem;
+            
+            p{
+                line-height: 2;
+                font-family: 'Open Sans', sans-serif;
+                text-align: justify;
+            }
+        }
+
+        .imagen {
+            grid-area: imagen;
+            background-color: #ffff64;
+            padding: 2rem;
+            
+            img{
+                // background: url(../../../assets/images/monachina.jpg);
+                border: solid 1px red;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                
+                width:100%;
+                height:400px;
+            
+            text-align:center;
+            }
+            
+        }
+    }
+}    
+
+//pc
+@media only screen and (min-width: 1000px) {
+    .contenedor{
+        
+        margin-top: 4rem;
+    }
+    .matematicas {
+        display: grid;
+        margin-bottom: 1rem;
+        grid-template-areas:
+            "titulo titulo imagen"
+            "contenido contenido imagen";
+            
+        grid-template-rows: 3rem 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+        .titulo {
+            grid-area: titulo;
+            background-color: #8855;
+            p{
+                font-size: 20px;
+                line-height: 2;
+                font-weight: 700;
+                margin-left: 2rem;
+            }
+        }
+
+        .contenido{
+            grid-area: contenido;
+            background-color: #ffa08c;
+            font-size: 16px;
+            padding: 2rem;
+            p{
+                line-height: 2;
+                font-family: 'Open Sans', sans-serif;
+                text-align: justify;
+            }
+        }
+
+        .imagen {
+            grid-area: imagen;
+            background-color: #ffff64;
+            padding: 2rem;
+
+            
+            
+            img{
+               
+                // background: url(../../../assets/images/monachina.jpg);
+                border: solid 1px red;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width:15rem;
+                height:15rem;
+            
+            }
+            
+        }
+    }
+
+    .footer{
+        
+        height: 10%;
+        grid-area: footer;
+        background-color: #ffff64;
+    }
+}    
