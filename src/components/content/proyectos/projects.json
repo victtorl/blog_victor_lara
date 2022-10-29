@@ -3,7 +3,7 @@
         "date": "07/10/22",
         "tags": "react",
         "title": "Mi antiguo portafolio",
-        "description":"Mi anterior portafolio :v...",
+        "description":"Mi anterior portafolio",
         "urlproject": "https://portafoliorlg.netlify.app/"
     },
     {
@@ -19,13 +19,6 @@
         "title": "Busqueda de canciones",
         "description":"Un buscador de canciones que usa la API de Deezer.",
         "urlproject": "https://search-songs-app.netlify.app/"
-    },
-    {
-        "date": "07/10/22",
-        "tags": "react firebase firestore cloud",
-        "title": "Cargar imagenes a firebase usando Cloud Firestore",
-        "description":"Gestion de imagenes a Cloud Firestore.",
-        "urlproject": "https://portafoliorlg.netlify.app/"
     },
     {
         "date": "07/10/22",
@@ -62,4 +55,6 @@
         "description":"Gestionando el menu semanal entre una serie de platos.",
         "urlproject": "https://menufamilia.netlify.app/"
     }
+    
 ]
+
