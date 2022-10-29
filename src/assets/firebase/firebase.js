@@ -51,7 +51,7 @@ export const getAllPostsFirebase = async () => {
 
   let datam = []
   querySnapshot.forEach((doc) => {
-    datam.push(doc.data())
+    datam.push(doc)
   });
 
   store.dispatch({
@@ -61,14 +61,18 @@ export const getAllPostsFirebase = async () => {
 
 }
 
+let idparam='lMjXCnX1vHqmnBPIwgO1'
 // Obtener post por id
-export const getPostporId = async () => {
+export const getPostporId = async (idparam) => {
+
+  let datospost
   const querySnapshot = await getDocs(collection(db, "posts"));
   querySnapshot.forEach((doc) => {
-    if (doc.id == 'B7o6wALnK5G1ecyUqeep') {
-      console.log(doc.data());
+    if (doc.id == idparam) {
+      datospost=doc.data()
     }
   });
+  return datospost
 }
 
 
@@ -78,7 +82,7 @@ export const editPostporId = async () => {
   const postRef = doc(db, "posts", "B7o6wALnK5G1ecyUqeep");
   await updateDoc(postRef, {
     title: 'el titulo esta editado bien chevere'
-  });
+  }); 
 
 }
 
@@ -96,7 +100,6 @@ export const uploadImage = async (file, namefile) => {
   return uploadBytes(ImagesRef, file)
     .then((snapshot) => console.log('Uploaded a blob or file!' + snapshot))
     .catch((e) => console.log(e))
-
 }
 
 //Obtener todos las urls de las imagenes

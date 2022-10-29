@@ -3,7 +3,8 @@ import { reducerPosts } from './reducers'
 
 const initialState={
     posts:[],
-    images:[]
+    images:[],
+    islogued:false
 }
 
 const rewindows =() => {

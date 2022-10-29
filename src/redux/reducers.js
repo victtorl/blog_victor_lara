@@ -10,6 +10,11 @@ export const reducerPosts =(state,action)=>{
             ...state,
             images:action.payload
         }
+        case '@dologin':
+        return{
+            ...state,
+            islogued:action.payload
+        }
 
     }
     return state

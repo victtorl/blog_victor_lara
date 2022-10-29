@@ -1,0 +1,84 @@
+
+
+// mobile
+@media only screen and (max-width: 1000px) {
+    #about{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,34,210,1) 35%, rgba(0,212,255,1) 100%);
+        //ocupa el altro de la pantalla importante
+        height:100vh; 
+        div{
+            height:100vh;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,34,210,1) 35%, rgba(0,212,255,1) 100%);
+            
+            p{
+                color: white;
+                padding: 5rem 2rem 0rem 2rem;
+                text-align: justify;
+                font-weight: 600;
+                // line-height: 32px;
+                height: 40rem;
+            }
+            .caja{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -10rem;
+                height: 15rem;
+                .image{
+                    background-image:url('./jim.gif');
+                    align-items: center;
+                    margin: 2rem 2rem 2rem 2rem ;
+                    width: 20rem;
+                    height: 10rem;
+                    border-radius: 10px;
+                    border: 4px solid white;
+                
+                }
+            }
+        }
+   
+    
+    }
+}
+    
+    
+
+// pc
+@media only screen and (min-width: 1000px) {
+
+#about{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(34,34,210,1) 35%, rgba(0,212,255,1) 100%);
+    margin-top: 5rem;
+    //ocupa el altro de la pantalla importante
+    height:100vh; 
+    div{
+      
+        p{
+            color: white;
+            padding: 5rem 5rem 0rem 5rem;
+            font-weight: 600;
+            line-height: 32px;
+        }
+    }
+   .caja{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image{
+            background-image:url('./jim.gif');
+            align-items: center;
+            margin: 2rem 2rem 2rem 2rem ;
+            width: 20rem;
+            height: 10rem;
+            border-radius: 10px;
+            border: 4px solid white;
+        
+        }
+    }
+
+}
+
+}

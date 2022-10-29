@@ -5,48 +5,38 @@ import { getAllPostsFirebase } from "../../../assets/firebase/firebase";
 import "./Home.scss";
 
 function Cards(props){
-  const {tags,date,title,urlimage,contenidos}=props;
+  const {date,urlimage,title,contenidos,tags,idDoc}=props;
 
-
-let titletoarray=title.split(' ').join('_')
- 
-
-let frase='la vida es bella'
-
-let fraseconguiones=title.split(' ').join('_')
-
-
-  
+// let fraseconguiones=title.split(' ').join('_')
   function openPost(){
     //obtener data de un post en especifico
-    // renderizar post en espacio
-  
-
-    console.log(fraseconguiones)
+    // renderizar post en espacio 
+    //  console.log(tags.map(u=>u.stringValue))
   }
   return(
-    
+
           <div className="card border-info mb-3" style={{maxWidth: '20rem'}} onClick={openPost}>
             <div className="card-header">
               <div className="card-title"><strong>{title}</strong></div>
-              
             </div>
-            
             <div className="card-body">
-              <p className="card-text resumen">{contenidos[0].substring(0,60)}...</p>
+              <p className="card-text resumen">{contenidos.at(0).stringValue.substring(0,80)}...</p>
               <p>{date}</p>
-              <p className="card-text tags">{tags}</p>
+              <p className="card-text tags">{tags.map(u=>u.stringValue)}</p>
             </div>
-            <button><Link to={`/${fraseconguiones}`} className="link" >go to post</Link></button>
+            <button><Link to={`/${idDoc.split('777')[1].split(' ').join('-')+'$$'+idDoc.split('777')[0].split(' ').join('-')}`} className="link" >go to post</Link></button>
           </div>
         )
 }
 
 
-const Home = () => {
 
+
+
+
+const Home = () => {
   const [flag,setFlag]=useState(0);
-  
+
   useEffect(() => {
     getAllPostsFirebase()
   }, []);
@@ -54,19 +44,26 @@ const Home = () => {
   const [arrayPost,setArrayPost]=useState(posts);
 
   const filtrar=(termino) => {
-      const arrayPostsRes=posts.filter((u)=>u.title.toLowerCase().includes(termino))
+      const arrayPostsRes=posts.filter((u)=>u._document.data.value.mapValue.fields.title.stringValue.toLowerCase().includes(termino))
        setArrayPost(arrayPostsRes)
   }
-  
+
   const handlechangeInputSearch=(e) => {
         filtrar(e.target.value)
         setFlag(1)
   }
-  
+
   function rederAllpost(){
     return(
       posts.map((u,id) => (
-        <Cards key={id} tags={u.tags} date={u.date} title={u.title} urlimage={u.urlimage} contenidos={u.contenidos} />
+        <Cards key={id} 
+        tags={u._document.data.value.mapValue.fields.tags.arrayValue.values} 
+        date={u._document.data.value.mapValue.fields.date.stringValue} 
+        title={u._document.data.value.mapValue.fields.title.stringValue} 
+        urlimage={u._document.data.value.mapValue.fields.urlimage.stringValue} 
+        contenidos={u._document.data.value.mapValue.fields.contenidos.arrayValue.values} 
+        idDoc={u._key.path.segments[6]+'777'+u._document.data.value.mapValue.fields.title.stringValue}
+         />
       ))
       )
   }
@@ -74,7 +71,14 @@ const Home = () => {
   function renderFilterPost(){
    return(
     arrayPost.map((u,id) => (
-      <Cards key={id} tags={u.tags} date={u.date} title={u.title} urlimage={u.urlimage} contenidos={u.contenidos} />
+      <Cards key={id} 
+      tags={u._document.data.value.mapValue.fields.tags.arrayValue.values} 
+      date={u._document.data.value.mapValue.fields.date.stringValue} 
+      title={u._document.data.value.mapValue.fields.title.stringValue} 
+      urlimage={u._document.data.value.mapValue.fields.urlimage.stringValue} 
+      contenidos={u._document.data.value.mapValue.fields.contenidos.arrayValue.values} 
+      idDoc={u._key.path.segments[6]+'777'+u._document.data.value.mapValue.fields.title.stringValue}
+       />
     ))
     )
   }

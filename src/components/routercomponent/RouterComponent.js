@@ -1,9 +1,12 @@
 import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
+import About from '../content/about/about';
 import ContenidoPost from '../content/blog/contenidoPost';
+import Contact from '../content/contact/contact';
 import Inicio from '../content/inicio/Home';
 import Matematicas from '../content/matematicas/matematicas';
 import Projects from '../content/proyectos/projects';
+import Login from '../content/users/Login';
 import RegistroBlog from '../content/users/RegistroBlog';
 
 
@@ -62,18 +65,11 @@ const RouterComponent = () => {
             <Routes>
                 <Route path="/" element={<Inicio />} />
                 <Route path="/projects" element={<Projects />} />
-                <Route path="/java" element={<Java/>} />
-                <Route path="/javascript" element={<Javascript />} />
-                <Route path="/diseno" element={<Diseno />} />
-                <Route path="/notas" element={<Notas />} />
-                <Route path="/github" element={<Github />} />
-                <Route path="/matematicas" element={<Matematicas />} />
-                <Route path="/mas" element={<Mas />} />
-                <Route path="/user" element={<RegistroBlog/>} />
+                <Route path="/about" element={<About/>} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/user" element={<Login/>} />
                 <Route path="/contacto" element={<Contacto />} />
-                <Route path="/certificados" element={<Certificados />} />
-                <Route path="/herramientas" element={<Herramientas />} />
-                <Route path="/:tituloBlog" element={<ContenidoPost/>}  />
+                <Route path="/:idPost" element={<ContenidoPost/>}  />
             </Routes>
         </div>
     );

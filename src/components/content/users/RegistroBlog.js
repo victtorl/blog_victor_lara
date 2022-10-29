@@ -43,7 +43,7 @@ function UploadImage(props) {
     return (
         <div className='uploadImage'>
             <input className='form-control' type="file" name="file" onChange={changeHandler} accept="image/*" />
-            <button className="btn btn-warning" onClick={handleUploadLinkStore}>Save image</button>
+            <button className="btn btn-warning" onClick={handleUploadLinkStore}>Charge image</button>
             <div><Toaster /></div>
         </div>
     )
